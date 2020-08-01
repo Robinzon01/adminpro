@@ -1,3 +1,4 @@
+import { ComponentsModule } from './components/components.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
@@ -11,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    AuthModule
+    AuthModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
