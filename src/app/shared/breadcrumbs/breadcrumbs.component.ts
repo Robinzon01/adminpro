@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreadcrumbsComponent implements OnInit {
 
+  nombrePage: string;
+  
   constructor() { }
 
   ngOnInit(): void {
+    this.nombrePage =''
   }
 
 }
