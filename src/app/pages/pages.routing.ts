@@ -1,6 +1,7 @@
+import { NuestraEmpresaComponent } from './nuestra-empresa/nuestra-empresa.component';
+import { IsanegComponent } from './isaneg/isaneg.component';
+import { ConsultaEspecialComponent } from './consulta-especial/consulta-especial.component';
 import { PagesComponent } from './pages.component';
-import { Grafica1Component } from './grafica1/grafica1.component';
-import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -8,15 +9,14 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
  
     {
-        path: 'dashboard', 
-        component: PagesComponent,
+        path: 'dashboard', component: PagesComponent,
         children: [
           {path: '', component: DashboardComponent },
-          {path: 'progress', component: ProgressComponent },
-          {path: 'grafica1', component: Grafica1Component }
+          {path: 'consulta-especial', component: ConsultaEspecialComponent },
+          {path: 'cdsi', component: NuestraEmpresaComponent },
+          {path: 'isaneg', component: IsanegComponent }
         ]
     }
-    //{ path: 'path/:routeParam', component: MyComponent },
     //{ path: 'staticPath', component: ... },
     //{ path: '**', component: ... },
     //{ path: 'oldPath', redirectTo: '/staticPath' },
