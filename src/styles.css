@@ -4,3 +4,13 @@
     height: 400px;
     width: 90%;
 }
+
+.imgPro {
+    height: 90%;
+    width: 90%;
+}
+
+.cdsi,
+#txtRojo {
+    color: red;
+}

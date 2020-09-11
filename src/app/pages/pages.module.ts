@@ -11,6 +11,19 @@ import { ProgressComponent } from './progress/progress.component';
 import { ConsultaEspecialComponent } from './consulta-especial/consulta-especial.component';
 import { IsanegComponent } from './isaneg/isaneg.component';
 import { NuestraEmpresaComponent } from './nuestra-empresa/nuestra-empresa.component';
+import { NuestroServicioComponent } from './nuestro-servicio/nuestro-servicio.component';
+import { PcpeProduccionComponent } from './pcpe-produccion/pcpe-produccion.component';
+import { PcpeSgcorComponent } from './pcpe-sgcor/pcpe-sgcor.component';
+import { PcpeSgdiComponent } from './pcpe-sgdi/pcpe-sgdi.component';
+import { PcpeSilegComponent } from './pcpe-sileg/pcpe-sileg.component';
+import { NuestroProductosComponent } from './nuestro-productos/nuestro-productos.component';
+import { SgcorComponent } from './sgcor/sgcor.component';
+import { TrabajosRealizadosComponent } from './trabajos-realizados/trabajos-realizados.component';
+import { CioComponent } from './cio/cio.component';
+import { CiopeComponent } from './ciope/ciope.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { CapacitacionComponent } from './capacitacion/capacitacion.component';
+import { AlianzasComponent } from './alianzas/alianzas.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +32,20 @@ import { NuestraEmpresaComponent } from './nuestra-empresa/nuestra-empresa.compo
     PagesComponent,
     ConsultaEspecialComponent,
     IsanegComponent,
-    NuestraEmpresaComponent
+    NuestraEmpresaComponent,
+    NuestroServicioComponent,
+    PcpeProduccionComponent,
+    PcpeSgcorComponent,
+    PcpeSgdiComponent,
+    PcpeSilegComponent,
+    NuestroProductosComponent,
+    SgcorComponent,
+    TrabajosRealizadosComponent,
+    CioComponent,
+    CiopeComponent,
+    ClientesComponent,
+    CapacitacionComponent,
+    AlianzasComponent
   ],exports: [
     ProgressComponent,
     Grafica1Component,
