@@ -14,3 +14,17 @@
 #txtRojo {
     color: red;
 }
+
+#tituloRojo {
+    color: red;
+    font-weight: 1em;
+    font-size: 1.5em;
+}
+
+.titulo {
+    color: #0A0A83;
+}
+
+body {
+    color: #010d14;
+}
