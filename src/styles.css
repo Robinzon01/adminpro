@@ -13,6 +13,7 @@
 .cdsi,
 #txtRojo {
     color: red;
+    font-weight: bold;
 }
 
 #tituloRojo {
@@ -23,6 +24,8 @@
 
 .titulo {
     color: #0A0A83;
+    font-size: large;
+    font-weight: bold;
 }
 
 body {
