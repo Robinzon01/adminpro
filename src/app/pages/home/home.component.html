@@ -1,0 +1,47 @@
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-themecolor"><strong>REGISTRO DE ASISTENCIA AL TRABAJADOR</strong></h3>
+    </div>
+    <div class="col-md-7 align-self-center">
+        <ol class="breadcrumb">
+            <!-- <li class="breadcrumb-item">pages</li> -->
+            <!-- <li class="breadcrumb-item active">Salir </li> -->
+            <button class="btn btn-danger" (click)="logout()">Salir
+                <i class="ti-unlock"></i>
+            </button>
+        </ol>
+    </div>
+    <div>
+        <!-- <button class="right-side-toggle btn-inverse btn btn-circle btn-sm m-l-10">
+            <i class="ti-unlock text-danger"></i>
+        </button> -->
+    </div>
+</div>
+<div class="row">
+    <!-- RELOJ -->
+    <div class="col-lg-5 col-xlg-4 col-md-6">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" class="diaActual text-center form-control" [ngModel]="DiaActualImp" disabled>
+                                <input type="text" class="horaActual text-center form-control" [ngModel]="horaActualImp" disabled>
+                            </div>
+                            <hr>
+                            <app-cabezera></app-cabezera>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- REGISTRO DE ASISTENCIA -->
+    <div class="col-lg-7 col-xlg-8 col-md-8">
+        <app-asistencia></app-asistencia>
+    </div>
+
+</div>

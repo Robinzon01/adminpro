@@ -1,3 +1,5 @@
+import { HomeComponent } from './home/home.component';
+
 import { AlianzasComponent } from './alianzas/alianzas.component';
 import { CapacitacionComponent } from './capacitacion/capacitacion.component';
 import { ClientesComponent } from './clientes/clientes.component';
@@ -10,6 +12,7 @@ import { PcpeSgcorComponent } from './pcpe-sgcor/pcpe-sgcor.component';
 import { PcpeProduccionComponent } from './pcpe-produccion/pcpe-produccion.component';
 import { NuestroServicioComponent } from './nuestro-servicio/nuestro-servicio.component';
 import { NuestraEmpresaComponent } from './nuestra-empresa/nuestra-empresa.component';
+import { LoginComponent } from './login/login.component';
 import { IsanegComponent } from './isaneg/isaneg.component';
 import { ConsultaEspecialComponent } from './consulta-especial/consulta-especial.component';
 import { PagesComponent } from './pages.component';
@@ -42,21 +45,20 @@ const routes: Routes = [
                 {path: 'pcpe_sileg', component: PcpeSilegComponent }
             ]
           },
-        /*   {path: 'pcpe_produccion', component: PcpeProduccionComponent }, */
+        /*   {path: 'pcpe_produccion', component: PcpeProduccionComponent }, reg_asis */
           {path: 'isaneg', component: IsanegComponent },
           {path: 'con_inv_ope', component: CioComponent },
           {path:  'tra_rea_io',component: CiopeComponent},
           {path:  'clientes',component: ClientesComponent},
           {path:  'capacitacion',component: CapacitacionComponent},
           {path:  'alianzas',component: AlianzasComponent},
-          {path: 'tra_rea', component: TrabajosRealizadosComponent }
+          {path: 'tra_rea', component: TrabajosRealizadosComponent },
+          {path: 'reg_asis', component: LoginComponent },// REGISTRO DE ASISTENCIA
+          {path: 'home', component: HomeComponent } // REGISTRO DE ASISTENCIA
 
         ]
     }
-    //{ path: 'staticPath', component: ... },
-    //{ path: '**', component: ... },
-    //{ path: 'oldPath', redirectTo: '/staticPath' },
-    //{ path: ..., component: ..., data: { message: 'Custom' }
+    
 ];
 
 @NgModule({

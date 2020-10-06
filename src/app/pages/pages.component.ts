@@ -1,4 +1,3 @@
-import { BreadcrumbsService } from './../_services/breadcrumbs.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,7 +13,7 @@ export class PagesComponent implements OnInit {
   menu: Array<any> = [];
   breadcrumbList: Array<any> = [];
 
-  constructor(private _router: Router, private serviMenu: BreadcrumbsService) { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
     // this.menu = this.serviMenu.getMenu();

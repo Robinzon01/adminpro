@@ -1,13 +1,15 @@
+import { TokenInterceptor } from './interceptor/TokenInterceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { ComponentsModule } from './components/components.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //MODULOS
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
-import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
@@ -23,10 +25,12 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    AuthModule,
-    ComponentsModule
+    ComponentsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

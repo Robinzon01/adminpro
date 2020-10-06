@@ -1,4 +1,4 @@
-import { AuthRoutingModule } from './auth/auth.routing';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
 import { PagesRoutingModule } from './pages/pages.routing';
@@ -14,8 +14,7 @@ const routes: Routes = [
   declarations: [],
   imports: [
     RouterModule.forRoot(routes),
-    PagesRoutingModule,
-    AuthRoutingModule
+    PagesRoutingModule
   ],
   exports: [ RouterModule ]
 })

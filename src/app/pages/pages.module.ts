@@ -2,7 +2,7 @@ import { ComponentsModule } from './../components/components.module';
 import { AppRoutingModule } from './../app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 import { PagesComponent } from './pages.component';
@@ -24,6 +24,16 @@ import { CiopeComponent } from './ciope/ciope.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { CapacitacionComponent } from './capacitacion/capacitacion.component';
 import { AlianzasComponent } from './alianzas/alianzas.component';
+import { AsistenciaComponent } from './asistencia/asistencia.component';
+import { CabezeraComponent } from './cabezera/cabezera.component';
+import { CompanyComponent } from './company/company.component';
+import { GelocationComponent } from './gelocation/gelocation.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { PagiRgtaComponent } from './pagi-rgta/pagi-rgta.component';
+import { RegistroComponent } from './registro/registro.component';
+import { RgtacdeComponent } from './rgtacde/rgtacde.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +55,17 @@ import { AlianzasComponent } from './alianzas/alianzas.component';
     CiopeComponent,
     ClientesComponent,
     CapacitacionComponent,
-    AlianzasComponent
+    AlianzasComponent,
+    AsistenciaComponent,
+    CabezeraComponent,
+    CompanyComponent,
+    GelocationComponent,
+    HomeComponent,
+    LoginComponent,
+    PagiRgtaComponent,
+    RegistroComponent,
+    RgtacdeComponent,
+    UsuarioComponent
   ],exports: [
     ProgressComponent,
     Grafica1Component,
@@ -56,7 +76,8 @@ import { AlianzasComponent } from './alianzas/alianzas.component';
     SharedModule,
     AppRoutingModule,
     FormsModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }
