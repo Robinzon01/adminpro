@@ -1,9 +1,11 @@
+import { GelocationService } from './../../services/gelocation.service';
 import { Component, OnInit } from '@angular/core';
 import { Astenci } from '../../models/astenci';
 import { Rgtacde } from '../../models/rgtacde';
 import Swal from 'sweetalert2';
 import { AsistenciaService } from '../../services/asistencia.service';
 import { Usuario } from '../../models/usuario';
+import { Gelocation } from 'src/app/models/gelocation';
 
 @Component({
   selector: 'app-asistencia',
@@ -14,12 +16,13 @@ export class AsistenciaComponent implements OnInit {
   // VARIABLES
   public asistencias: Astenci[];
   public rgtacde: Rgtacde;
+  public gelocation: Gelocation;
   public rgtacdes: Rgtacde[];
   private fechaA = new Date();
   estado: true;
   public usuario: Usuario;
 
-  constructor(public asisService: AsistenciaService) {}
+  constructor(public asisService: AsistenciaService, public serviGelocation: GelocationService) {}
 
   ngOnInit() {
     this. asSinRegistrar();
@@ -38,13 +41,20 @@ export class AsistenciaComponent implements OnInit {
     this.rgtacde = new Rgtacde();
     this.usuario = new Usuario();
     this.usuario = JSON.parse(sessionStorage.getItem('usuario'));
-
+    //VAMOS A VERIFICAR LA UBICACION DEL USUARIO
+    this.serviGelocation.getGelocation(this.usuario).subscribe(
+        (rest: Gelocation) => {
+          this.gelocation = rest;
+          console.log(this.gelocation);
+        }
+    );
     // VAMOS A PASAR LOS VALORES
     this.rgtacde.usuario = this.usuario.username;
     this.rgtacde.astenci = aste;
     this.rgtacde.cia = this.usuario.cia;
     this.rgtacde.latitud = sessionStorage.getItem('lat');
     this.rgtacde.longuitud = sessionStorage.getItem('lng');
+
     // MENSAJE DE VERIFICACIÓN CUANDO HACE UN REGISTRO
     Swal.fire({
       title: `Está seguro de registrar su ${aste.nombre}?`,
@@ -70,6 +80,7 @@ export class AsistenciaComponent implements OnInit {
       }
     });
   }
+
    // METODO QUE NOS DEVUELVE LAS ASISTENCIA SIN REGISTRAR
    public asSinRegistrar() {
     this.usuario = new Usuario();

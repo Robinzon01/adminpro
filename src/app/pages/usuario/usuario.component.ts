@@ -1,7 +1,9 @@
+import { RegistroComponent } from './../registro/registro.component';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../models/usuario';
 import { UsuarioService } from '../../services/usuario.service';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-usuario',
@@ -10,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class UsuarioComponent implements OnInit {
   public usuarios: Usuario[];
   paginador: any;
-  constructor(public usuService: UsuarioService, private actiRouter: ActivatedRoute) { }
+  constructor(public usuService: UsuarioService, private actiRouter: ActivatedRoute, private dialog: MatDialog) { }
 
   ngOnInit() {
         // VAMOS A TRAER EL PAGE DE USUARIO
@@ -27,6 +29,14 @@ export class UsuarioComponent implements OnInit {
             });
           }
         );
+  }
+
+  abrirDialogo(usuario?: Usuario){
+    // vamos a instanciar el usuario
+    let usu = usuario != null ? usuario : new Usuario();
+    this.dialog.open(RegistroComponent,{
+      width:'800px', data: usu
+    });
   }
 
 }
